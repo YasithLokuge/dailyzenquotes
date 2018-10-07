@@ -17,6 +17,7 @@ module.exports = function (message) {
      // Do async job
         request.get(options, function(error, response, body) {
             if (error) {
+                console.log("error in rite kit request :" + error);
                 reject(error);
             } else {
                 console.log("rite kit response : " + body);

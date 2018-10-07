@@ -22,6 +22,7 @@ module.exports = function (message, imageUrl) {
      // Do async job
         request(options, function(error, response, body) {
             if (error) {
+                console.log("error in buffer request :" + error);
                 reject(error);
             } else {
                 console.log("buffer response :" + body);
