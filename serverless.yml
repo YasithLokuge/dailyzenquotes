@@ -59,7 +59,7 @@ functions:
   publish:
     handler: handler.publish
     events:
-      - schedule: cron(0 0 2 1/1 * ? *)
+      - schedule: cron(0 3 * * ? *)
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
