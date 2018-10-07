@@ -13,13 +13,13 @@ module.exports.publish = async (event, context) => {
   console.log('buffer final Response : ' + bufferResponse);
   return {
     statusCode: 200,
-    body: JSON.stringify({
+    body: {
       message: {
         bufferResponse: bufferResponse,
         imageUrl: imageUrl,
         quote: quote
       },
-      input: event,
-    }),
+      input: event
+    }
   };
 };
