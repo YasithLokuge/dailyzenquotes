@@ -58,6 +58,7 @@ provider:
 functions:
   publish:
     handler: handler.publish
+    timeout: 10
     events:
       - schedule: cron(0 3 * * ? *)
 #    The following are a few example events you can configure

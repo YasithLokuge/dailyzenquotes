@@ -14,7 +14,11 @@ module.exports.publish = async (event, context) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'buffer final Response :' + bufferResponse + ' ritekit image url : ' + imageUrl,
+      message: {
+        bufferResponse: bufferResponse,
+        imageUrl: imageUrl,
+        quote: quote
+      },
       input: event,
     }),
   };
